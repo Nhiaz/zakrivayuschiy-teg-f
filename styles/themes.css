@@ -4,3 +4,56 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+:root.theme-light {
+    --second-background-color: rgb(0, 0, 0);
+    --font-text-color: rgb(0, 0, 0);
+    --main-background-color: rgb(255, 255, 255);
+    --card-container-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+    --emblem-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --card-font-weight: 400;
+    --card-subtitle-font-weight: 700;
+    --bg: repeating-linear-gradient(to right, rgb(231, 231, 231) 2px, transparent 4px),
+      repeating-linear-gradient(to bottom, rgb(231, 231, 231) 2px, transparent 4px),
+      linear-gradient(to bottom, rgb(231, 231, 231) 0%, rgb(231, 231, 231) 0.01%, rgb(26, 26, 26) 100%);
+    --fill-color: rgb(255, 0, 0);
+    --like-color: rgb(0, 0, 0);
+    --text-color: rgb(255, 255, 255);
+  }
+  
+  :root.theme-dark {
+    --second-background-color: rgb(0, 204, 20);
+    --main-background-color: rgb(0, 0, 0);
+    --font-text-color: rgb(0, 204, 20);
+    --card-container-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+    --emblem-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --card-font-weight: 465;
+    --card-subtitle-font-weight: 785;
+    --bg: repeating-linear-gradient(to right, rgb(0, 0, 0) 2px, transparent 4px),
+      repeating-linear-gradient(to bottom, rgb(0, 0, 0) 2px, transparent 4px),
+      linear-gradient(to bottom, rgb(0, 127, 12), rgb(0, 67, 6));
+    --text-color: rgb(0, 204, 20);
+    --like-color: rgb(0, 204, 20);
+    --fill-color: rgb(255, 0, 0);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+        --second-background-color: rgb(0, 204, 20);
+        --main-background-color: rgb(0, 0, 0);
+        --font-text-color: rgb(0, 204, 20);
+        --card-container-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+        --emblem-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+        --title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+        --card-font-weight: 465;
+        --card-subtitle-font-weight: 785;
+        --bg: repeating-linear-gradient(to right, rgb(0, 0, 0) 2px, transparent 4px),
+          repeating-linear-gradient(to bottom, rgb(0, 0, 0) 2px, transparent 4px),
+          linear-gradient(to bottom, rgb(0, 127, 12), rgb(0, 67, 6));
+        --text-color: rgb(0, 204, 20);
+        --like-color: rgb(0, 204, 20);
+        --fill-color: rgb(255, 0, 0);
+    }
+  }
+  
