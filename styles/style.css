@@ -31,7 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 136px 0px 25px;
+  padding: clamp(7.5rem, 7.15rem + 1.5vw, 8.5rem) 0px 25px;
   font-family: var(--accent-font);
   text-transform: uppercase;
 }
@@ -405,6 +405,15 @@
   inline-size: clamp(21.3rem, 1.5vw + 21rem, 22.3rem);
 }
 
+.dialog[open] {
+  display: grid;
+}
+
+.dialog:not([open]) {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .dialog-img {
   inline-size: 39px;
   block-size: 39px;
@@ -431,6 +440,18 @@
 
 @media (min-width: 1440px) {
   .save-button {
-    width: max-content;
+    width: 340px;
+  }
+
+  .img-floppy {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    margin: 0px;
+  }
+      
+  .card__image-label {
+    top: 25px;
+    right: 25px;
   }
 }
