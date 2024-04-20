@@ -44,6 +44,10 @@
     fill: var(--main-background-color);
     transition: fill 0.3s linear;
   }
+
+  .like-icon .contour {
+    transition: fill 0.1s linear;
+  }
   
   .like-icon:hover .core {
     fill: var(--like-color);
